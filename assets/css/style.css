@@ -1,0 +1,89 @@
+/* =========================================
+   ESTILOS GERAIS E FUNDO (NOVO GIF CÓSMICO)
+   ========================================= */
+body {
+    /* Cor de fundo escura de segurança (plano B se o GIF falhar) */
+    background-color: #0b0b1a; 
+
+    /* NOVO LINK DO GIF DE FUNDO FORNECIDO */
+    background-image: url('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWtqbmtsbGlvdTJjaWQ1cjY2azhicnJtZ3U2eWtheHAybmdzdzFibyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/E5112Itpfx7G8zzYoV/giphy.gif');
+    
+    /* Ajustes para o fundo cobrir a tela toda sem repetir */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* O fundo fica parado enquanto o conteúdo rola */
+    
+    font-family: Arial, sans-serif;
+    color: #fff; /* Cor padrão do texto clara */
+    margin: 0;
+}
+
+/* =========================================
+   CAIXA CENTRALIZADA (Card de Vidro Escuro)
+   ========================================= */
+.custom-card {
+    /* Fundo escuro semitransparente para dar contraste com o texto branco */
+    background: rgba(15, 15, 30, 0.85) !important; 
+    
+    /* Efeito de vidro desfocado no fundo (Glassmorphism) */
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    padding: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Garante que os títulos e labels sejam brancos dentro do card */
+.custom-card h1, 
+.custom-card h2, 
+.custom-card label,
+.custom-card .text-light {
+    color: #fff !important;
+}
+
+/* =========================================
+   BOTÕES E INPUTS
+   ========================================= */
+.custom-btn {
+    background: linear-gradient(45deg, #6b21a8, #d946ef);
+    border: none;
+    color: white !important;
+    font-weight: bold;
+}
+
+.custom-btn:hover {
+    background: linear-gradient(45deg, #7e22ce, #e879f9);
+    transform: translateY(-2px);
+    transition: all 0.2s;
+}
+
+/* Estilo para o input de data para ficar visível no fundo escuro */
+input[type="date"].form-control {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    color: #000 !important;
+}
+
+/* Altera a cor do ícone de calendário do input para branco */
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+/* =========================================
+   RESULTADO (Marca d'água do Signo)
+   ========================================= */
+.sign-background-overlay {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; height: 80%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.1; /* Super transparente */
+    z-index: 0;
+}
